@@ -1,0 +1,68 @@
+# World types where mob targeting is modified.
+# Valid options:
+#   - overworld
+#   - nether
+#   - end
+#   - all
+#   - none
+#
+# A world name must be specified if "none" is used here
+#
+worldtypes: nether
+
+#
+# Names of the worlds where mob targeting is modified (Case-sensitive!)
+#
+worldnames: world
+
+#
+# Names of mobs whose targeting will be modified for the listed
+# armor and items. To have a certain item affect all mobs, use the
+# "all" mob name. Place protective items in the "passive" category
+# and dangerous items in the "hostile" category
+#
+# Format:
+# hostilemobs:
+#   name:
+#   hostile:
+#     helmets:
+#     chestplates:
+#     leggings:
+#     boots:
+#     items:
+#
+# Valid mob names:
+#   - zombie
+#   - skeleton
+#   - skeletonrider
+#   - spider
+#   - creeper
+#   - slime
+#   - silverfish
+#   - enderman
+#   - enderdragon
+#   - pigman
+#   - blaze
+#   - ghast
+#   - magmaslime
+#   - wolf
+#   - all
+#
+# Items must be a list of Item IDs, not names!
+#
+hostilemobs: 
+  name: pigman
+  hostile:
+    helmets: diamond
+    chestplates: diamond
+    leggings: diamond
+    boots: diamond
+    items:
+#
+# Block radius from the player to check for mobs
+# hostilecheck - for making mobs hostile
+# passivecheck - for making mobs forget the player
+#
+hostileradius: 64
+passiveradius: 64
+  
