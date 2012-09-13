@@ -1,3 +1,5 @@
+# MobHostility v0.1
+#
 # World types where mob targeting is modified.
 # Valid options:
 #   - overworld
@@ -22,42 +24,50 @@ worldnames: world
 # and dangerous items in the "hostile" category
 #
 # Format:
-# hostilemobs:
-#   name:
-#   hostile:
-#     helmets:
-#     chestplates:
-#     leggings:
-#     boots:
-#     items:
+# mobitems:
+#   mobname:
+#     hostile:
+#       helmets:
+#       chestplates:
+#       leggings:
+#       boots:
+#       items:
+#     passive:
+#       helmets:
+#       chestplates:
+#       leggings:
+#       boots:
+#       items:
 #
 # Valid mob names:
 #   - zombie
 #   - skeleton
 #   - skeletonrider
 #   - spider
+#   - cave_spider
 #   - creeper
 #   - slime
 #   - silverfish
 #   - enderman
-#   - enderdragon
-#   - pigman
+#   - ender_dragon
+#   - pig_zombie
 #   - blaze
 #   - ghast
-#   - magmaslime
+#   - magma_cube
 #   - wolf
+#   - giant
 #   - all
 #
 # Items must be a list of Item IDs, not names!
 #
-hostilemobs: 
-  name: pigman
-  hostile:
-    helmets: diamond
-    chestplates: diamond
-    leggings: diamond
-    boots: diamond
-    items:
+mobitems:
+  pig_zombie:
+    hostile:
+      helmets: 310
+      chestplates: 311
+      leggings: 312
+      boots: 313
+      items:
 #
 # Block radius from the player to check for mobs
 # hostilecheck - for making mobs hostile
