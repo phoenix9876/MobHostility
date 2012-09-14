@@ -1,4 +1,4 @@
-# MobHostility v0.1
+# MobHostility v1.0
 #
 # World types where mob targeting is modified.
 # Valid options:
@@ -9,13 +9,14 @@
 #   - none
 #
 # A world name must be specified if "none" is used here
+# Specify options with [] brackets separated by commas.
 #
-worldtypes: nether
+worldtypes: [ nether ]
 
 #
 # Names of the worlds where mob targeting is modified (Case-sensitive!)
 #
-worldnames: world
+worldnames:
 
 #
 # Names of mobs whose targeting will be modified for the listed
@@ -42,7 +43,6 @@ worldnames: world
 # Valid mob names:
 #   - zombie
 #   - skeleton
-#   - skeletonrider
 #   - spider
 #   - cave_spider
 #   - creeper
@@ -54,20 +54,26 @@ worldnames: world
 #   - blaze
 #   - ghast
 #   - magma_cube
-#   - wolf
 #   - giant
 #   - all
 #
-# Items must be a list of Item IDs, not names!
+# Items must be a list of Item IDs, not names! Items must be in 
+# [] brackets separated by commas.
 #
 mobitems:
-  pig_zombie:
+  all:
     hostile:
-      helmets: 310
-      chestplates: 311
-      leggings: 312
-      boots: 313
-      items:
+      helmets: [ ]
+      chestplates: [ ]
+      leggings: [ ]
+      boots: [ ]
+      items: [ ]
+    passive:
+      helmets: [ ]
+      chestplates: [ ]
+      leggings: [ ]
+      boots: [ ]
+      items: [ ]
 #
 # Block radius from the player to check for mobs
 # hostilecheck - for making mobs hostile
@@ -75,4 +81,8 @@ mobitems:
 #
 hostileradius: 64
 passiveradius: 64
-  
+#
+# Time in seconds in between player inventory/armor checks
+# Minimum: 1 (20 server ticks)
+#
+time: 5

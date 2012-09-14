@@ -1,6 +1,6 @@
 name: MobHostility
 main: com.github.phoenix9876.MobHostility.MobHostility
-version: 0.1 
+version: 1.0 
 description: Controls mob targeting behavior based on player inventory.
 author: phoenix9876
 website: http://phoenix9876.github.com/MobHostility/
