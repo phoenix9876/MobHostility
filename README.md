@@ -6,7 +6,7 @@ Plugin for Bukkit to control mob targeting.
 
 _All values except hostileradius, passiveradius, and time must be typed in [] brackets!_
 
-> worldtypes
+###> worldtypes
 
 __Description__: A list of all world types in which to modify mob targeting
 
