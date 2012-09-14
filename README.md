@@ -6,7 +6,7 @@ Plugin for Bukkit to control mob targeting.
 
 _All values except hostileradius, passiveradius, and time must be typed in [] brackets!_
 
-###> worldtypes
+> worldtypes
 
 __Description__: A list of all world types in which to modify mob targeting
 
@@ -16,6 +16,8 @@ This field can be left empty if a valid worldname is provided.
 
 _NOTE: The "none" option disables the plugin!_
 
+
+
 > worldnames
 
 __Description__: A list of all world types in which to modify mob targeting
@@ -23,6 +25,8 @@ __Description__: A list of all world types in which to modify mob targeting
 __Values__: Case-sensitive world names on the server, i.e. world, world_nether, world_the_end...
 
 This field can be left empty if a valid worldtype is provided.
+
+
 
 > mobitems
 
@@ -52,17 +56,23 @@ __Valid items__: Any Item ID or Item ID with damage values, such as "262" for ar
 
 _NOTE: You can use any Item ID, including those from mods like IndustrialCraft2, RedPower2, BuildCraft 2/3, etc._
 
+
+
 > hostileradius
 
 __Description__: Number of blocks around the player to modify mobs to attack the player
 
 Must be greater than 0.
 
+
+
 > passiveradius
 
 __Description__: Number of blocks around the player to modify mobs to ignore the player
 
 _NOTE: This feature is not currently enabled. Watch for a future update!_
+
+
 
 > time
 
