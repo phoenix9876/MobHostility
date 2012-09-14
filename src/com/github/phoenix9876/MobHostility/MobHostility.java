@@ -38,7 +38,7 @@ public class MobHostility extends JavaPlugin
 	    		public void run() {
 	    			CheckOnlinePlayers();
 	    		}
-	    	}, 60L, getConfig().getLong("time"));	
+	    	}, 60L, getConfig().getLong("time") * 20L);	
     	}
     	else
     	{
