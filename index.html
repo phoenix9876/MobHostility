@@ -1,71 +1,126 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>MobHostility by phoenix9876</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="MobHostility : Plugin for Bukkit to control mob targeting behavior" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MobHostility</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>MobHostility</h1>
-          <h2>Plugin for Bukkit to control mob behavior towards players</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/phoenix9876/MobHostility">View on GitHub</a>
+
+          <h1 id="project_title">MobHostility</h1>
+          <h2 id="project_tagline">Plugin for Bukkit to control mob targeting behavior</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/phoenix9876/MobHostility/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/phoenix9876/MobHostility/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/phoenix9876/MobHostility/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/phoenix9876/MobHostility/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/phoenix9876/MobHostility" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Configuration</h2>
 
-        <hr>
+<p><em>All values except hostileradius, passiveradius, and time must be typed in [] brackets!</em></p>
 
-        <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
+<blockquote>
+<p>worldtypes</p>
+</blockquote>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p><strong>Description</strong>: A list of all world types in which to modify mob targeting</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p><strong>Values</strong>: overworld, nether, end, all, none</p>
+
+<p>This field can be left empty if a valid worldname is provided.</p>
+
+<p><em>NOTE: The "none" option disables the plugin!</em></p>
+
+<blockquote>
+<p>worldnames</p>
+</blockquote>
+
+<p><strong>Description</strong>: A list of all world types in which to modify mob targeting</p>
+
+<p><strong>Values</strong>: Case-sensitive world names on the server, i.e. world, world_nether, world_the_end...</p>
+
+<p>This field can be left empty if a valid worldtype is provided.</p>
+
+<blockquote>
+<p>mobitems</p>
+</blockquote>
+
+<p><strong>Description</strong>: A list of mobs with associated items that will cause the mob to attack or ignore players with these items in their inventory</p>
+
+<p><strong>Format</strong>:</p>
+
+<pre><code>mobname:
+  hostile: []
+    helmets: []
+    chestplates: []
+    leggings: []
+    boots: []
+    items: []
+  passive:
+    helmets: []
+    chestplates: []
+    leggings: []
+    boots: []
+    items: []
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p><strong>Valid mob names</strong>: zombie, skeleton, spider, cave_spider, creeper, slime, silverfish, enderman, ender_dragon, pig_zombie, blaze, ghast, magma_cube, giant, all</p>
 
-<h3>Designer Templates</h3>
+<p><strong>Valid items</strong>: Any Item ID or Item ID with damage values, such as "262" for arrows or "5:2" for a specific wooden plank</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p><em>NOTE: You can use any Item ID, including those from mods like IndustrialCraft2, RedPower2, BuildCraft 2/3, etc.</em></p>
 
-<h3>Rather Drive Stick?</h3>
+<blockquote>
+<p>hostileradius</p>
+</blockquote>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p><strong>Description</strong>: Number of blocks around the player to modify mobs to attack the player</p>
 
-<h3>Authors and Contributors</h3>
+<p>Must be greater than 0.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<blockquote>
+<p>passiveradius</p>
+</blockquote>
 
-<h3>Support or Contact</h3>
+<p><strong>Description</strong>: Number of blocks around the player to modify mobs to ignore the player</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+<p><em>NOTE: This feature is not currently enabled. Watch for a future update!</em></p>
 
-        <footer>
-          MobHostility is maintained by <a href="https://github.com/phoenix9876">phoenix9876</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<blockquote>
+<p>time</p>
+</blockquote>
 
-        
-      </div>
+<p><strong>Description</strong>: Time in seconds between server checks on player inventories. Default is 5 seconds (100 server ticks).</p>
+
+<p>Must be 1 or greater</p>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MobHostility maintained by <a href="https://github.com/phoenix9876">phoenix9876</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
